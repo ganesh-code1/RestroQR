@@ -3,7 +3,7 @@ import { Server } from "socket.io";
 export const configureSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "https://restro-qr.vercel.app/",
+      origin: "https://restro-qr.vercel.app",
       methods: ["GET", "POST"],
     },
   });
