@@ -9,7 +9,7 @@ export const sessionMiddleware = session({
 });
 
 export const corsMiddleware = cors({
-  origin: [/http:\/\/localhost(:\d+)?/, /http:\/\/192\.168\.29\.112(:\d+)?/],
+  origin: ["https://restro-qr.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
