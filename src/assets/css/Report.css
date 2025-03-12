@@ -1,0 +1,22 @@
+.reports-dashboard {
+  padding: 20px;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.metric {
+  text-align: center;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart {
+  margin: 20px;
+}

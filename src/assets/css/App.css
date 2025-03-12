@@ -1,0 +1,33 @@
+body {
+  font-family: "Heebo",sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff7b54, #ffcc00); /* Gradient effect */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff5252, #ff7b54);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffcc00 #f1f1f1;
+}

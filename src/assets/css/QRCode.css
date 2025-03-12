@@ -1,0 +1,35 @@
+.QRFrame {
+  padding: 22px;
+  width: fit-content;
+  border: 1px solid gainsboro;
+  background: #fff;
+  /* background-image: url(../frame/frame1.jpg);
+  background-size: cover; */
+  border-radius: 20px;
+}
+
+.QRFrame p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.qr-left {
+  width: 40%;
+  margin: 20px;
+}
+
+.qr-right {
+  width: 60%;
+  margin: 20px;
+  text-align: left;
+}
+
