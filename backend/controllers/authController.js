@@ -72,6 +72,7 @@ export const logout = (req, res) => {
 };
 
 export const sessionCheck = async (req, res) => {
+  console.log("Session after login:", req.session);
   if (req.session && req.session.uid) {
     const user = await adminModel.findById(req.session.uid);
     if (user) {
