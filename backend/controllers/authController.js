@@ -49,7 +49,6 @@ export const login = async (req, res) => {
     const isMatch = await bcrypt.compare(Password, user.Password);
     if (!isMatch) return res.status(400).json({ error: "Invalid email or password" });
     req.session.uid = user._id;
-    console.log("Session after login:", req.session);
     res.status(200).json({
       message: "Login successful",
       restaurantSlug: user.slug,
@@ -72,7 +71,6 @@ export const logout = (req, res) => {
 };
 
 export const sessionCheck = async (req, res) => {
-  console.log("Session after login:", req.session);
   if (req.session && req.session.uid) {
     const user = await adminModel.findById(req.session.uid);
     if (user) {

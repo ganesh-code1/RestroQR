@@ -1,25 +1,16 @@
 import session from "express-session";
 import MongoStore from "connect-mongo";
-import cors from "cors";
+import dotenv from "dotenv";
 
+dotenv.config();
 const MONGO_URI = "mongodb+srv://hotel-admin:Mongo%402025@restroqr.mkvof.mongodb.net/?retryWrites=true&w=majority&appName=RestroQR&tls=true";
 
 export const sessionMiddleware = session({
   secret: "firstsession",
   resave: false,
   saveUninitialized: false,
-  store: MongoStore.create({
-    mongoUrl: MONGO_URI, 
-    collectionName: "sessions",
-  }),
-  cookie: {
-    secure: true,
-    sameSite: "None", 
-    httpOnly: true, 
-    maxAge: 1000 * 60 * 60 * 24 * 7, 
-  },
+  cookie: { secure: true },
 });
-
 
 export const corsMiddleware = cors({
   origin: ["https://restro-qr.netlify.app"],
