@@ -12,10 +12,11 @@ export const sessionMiddleware = session({
     mongoUrl: MONGO_URI, 
     collectionName: "sessions",
   }),
-  cookie: { 
-    secure: true, 
-    sameSite: "None",
-    httpOnly: true
+  cookie: {
+    secure: true,
+    sameSite: "None", 
+    httpOnly: true, 
+    maxAge: 1000 * 60 * 60 * 24 * 7, 
   },
 });
 
