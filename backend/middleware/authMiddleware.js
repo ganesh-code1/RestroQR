@@ -1,5 +1,6 @@
 import session from "express-session";
 import MongoStore from "connect-mongo";
+import cors from "cors";
 
 const MONGO_URI = "mongodb+srv://hotel-admin:Mongo%402025@restroqr.mkvof.mongodb.net/?retryWrites=true&w=majority&appName=RestroQR&tls=true";
 
